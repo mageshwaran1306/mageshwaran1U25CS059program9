@@ -14,15 +14,16 @@ CREATE TABLE Student (
 
 INSERT INTO Department VALUES
 (101, 'Computer Science'),
-(102, 'Commerce'),
-(103, 'Mathematics');
+(102, 'Mathematics'),
+(103, 'Physics');
 
 INSERT INTO Student VALUES
-(1, 'Arun', 101),
-(2, 'Divya', 102),
-(3, 'Karthik', 101);
+(1001, 'Arun', 101),
+(1002, 'Divya', 102),
+(1003, 'Karthik', 101),
+(1004, 'Nisha', 103);
 
-SELECT Student.StudentName, Department.DepartmentName
-FROM Student
-INNER JOIN Department
-ON Student.DepartmentID = Department.DepartmentID;
+SELECT s.StudentName, d.DepartmentName
+FROM Student s
+INNER JOIN Department d
+ON s.DepartmentID = d.DepartmentID;
